@@ -9,11 +9,13 @@ export class AppComponent implements OnInit {
   title = 'ngrx-componentstore';
 
   value = false;
+  result = '';
 
   ngOnInit(): void {
     this.value = true;
+    this.printValue(true);
   }
   printValue(val: boolean) {
-    this.value = val;
+    this.result = val ? 'checked' : 'unchecked';
   }
 }
