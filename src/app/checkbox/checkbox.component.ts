@@ -21,9 +21,9 @@ export class CheckboxComponent implements OnInit {
   }
   @Output() readonly valueChange = this.store.select((state) => state.checked);
   constructor(private store: CheckBoxStore) {
-    this.store.setState({
-      checked: false,
-    });
+    // this.store.setState({
+    //   checked: false,
+    // });
   }
 
   readonly value$ = this.store.select((state) => state.checked);

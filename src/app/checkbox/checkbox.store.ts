@@ -8,6 +8,12 @@ export interface ICheckBoxState {
 
 @Injectable()
 export class CheckBoxStore extends ComponentStore<ICheckBoxState> {
+  constructor() {
+    super({
+      checked: false,
+    });
+  }
+
   readonly valueChanged = this.effect<Event>((event$) => {
     return event$.pipe(
       tap<Event>((evt) => {
